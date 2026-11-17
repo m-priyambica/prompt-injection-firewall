@@ -9,19 +9,7 @@ and data-leakage risks by combining text normalization, structural
 rules, a pretrained machine-learning detector, risk-based routing, and
 output inspection.
 
-```{=html}
-<p align="center">
-```
-`<strong>`{=html}Python`</strong>`{=html} ·
-`<strong>`{=html}Flask`</strong>`{=html} · `<strong>`{=html}Hugging Face
-Transformers`</strong>`{=html} ·
-`<strong>`{=html}DeBERTa-v3`</strong>`{=html} ·
-`<strong>`{=html}PyTorch`</strong>`{=html} ·
-`<strong>`{=html}Ollama`</strong>`{=html} · `<strong>`{=html}Llama 3.2
-3B`</strong>`{=html}
-```{=html}
-</p>
-```
+
 
 ------------------------------------------------------------------------
 
