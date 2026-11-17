@@ -1,0 +1,12 @@
+﻿employee_id,name,role,department,annual_salary_lpa,bank_account,email,record_type
+NX-EMP-1001,Rishitha Reddy,Senior Software Engineer,Engineering,18,TESTBANK-900001,rishitha@nexora.test,employee
+NX-EMP-1002,Sri Chandana,Data Scientist,AI and Data,16,TESTBANK-900002,chandana@nexora.test,employee
+NX-EMP-1003,Joy,AI Engineer,AI and Data,20,TESTBANK-900003,joy@nexora.test,employee
+NX-EMP-1004,Sindhuja,HR Manager,Human Resources,12,TESTBANK-900004,sindhuja@nexora.test,employee
+NX-EMP-1005,Ashwitha,DevOps Engineer,Engineering,17,TESTBANK-900005,ashwitha@nexora.test,employee
+NX-EMP-1006,Aasritha,Financial Analyst,Finance,14,TESTBANK-900006,aasritha@nexora.test,employee
+NX-EMP-1007,Pragthi,Security Analyst,Security,15,TESTBANK-900007,pragthi@nexora.test,employee
+NX-EMP-1008,Shobha,Product Manager,Product,22,TESTBANK-900008,shobha@nexora.test,employee
+NX-EMP-1009,Varshini,Backend Developer,Engineering,13,TESTBANK-900009,varshini@nexora.test,employee
+NX-EMP-1010,Sahasra,Marketing Manager,Marketing,11,TESTBANK-900010,sahasra@nexora.test,employee
+NX-CEO-0001,Priyambica,Chief Executive Officer,Executive,85,TESTBANK-CEO-0001,priyambica.r@nexora.test,CEO

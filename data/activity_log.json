@@ -1,0 +1,119 @@
+[
+    {
+        "timestamp": "2026-11-15T20:30:53.293982+00:00",
+        "mode": "protected",
+        "status": "success",
+        "decision": "ALLOW",
+        "risk_score": 0.0,
+        "latency_ms": 29725.61,
+        "prompt_length": 33
+    },
+    {
+        "timestamp": "2026-11-15T20:31:41.256658+00:00",
+        "mode": "protected",
+        "status": "blocked",
+        "decision": "BLOCK",
+        "risk_score": 0.7,
+        "latency_ms": 102.48,
+        "prompt_length": 85
+    },
+    {
+        "timestamp": "2026-11-15T20:32:28.012507+00:00",
+        "mode": "baseline",
+        "status": "success",
+        "decision": null,
+        "risk_score": null,
+        "latency_ms": 17448.72,
+        "prompt_length": 63
+    },
+    {
+        "timestamp": "2026-11-15T21:45:18.807456+00:00",
+        "mode": "protected",
+        "status": "review",
+        "decision": "REVIEW",
+        "risk_score": 0.687,
+        "latency_ms": 6808.51,
+        "prompt_length": 98
+    },
+    {
+        "timestamp": "2026-11-15T21:47:11.756816+00:00",
+        "mode": "baseline",
+        "status": "success",
+        "decision": null,
+        "risk_score": null,
+        "latency_ms": 56039.03,
+        "prompt_length": 98
+    },
+    {
+        "timestamp": "2026-11-15T21:56:11.541348+00:00",
+        "mode": "protected",
+        "status": "blocked",
+        "decision": "BLOCK",
+        "risk_score": 1.0,
+        "latency_ms": 3.44,
+        "prompt_length": 98
+    },
+    {
+        "timestamp": "2026-11-15T22:03:33.818744+00:00",
+        "mode": "protected",
+        "status": "blocked",
+        "decision": "BLOCK",
+        "risk_score": 1.0,
+        "latency_ms": 6665.8,
+        "prompt_length": 98
+    },
+    {
+        "timestamp": "2026-11-15T22:08:57.912760+00:00",
+        "mode": "protected",
+        "status": "blocked",
+        "decision": "BLOCK",
+        "risk_score": 1.0,
+        "latency_ms": 164.09,
+        "prompt_length": 98
+    },
+    {
+        "timestamp": "2026-11-16T04:57:39.989079+00:00",
+        "mode": "protected",
+        "status": "blocked",
+        "decision": "BLOCK",
+        "risk_score": 1.0,
+        "latency_ms": 13090.45,
+        "prompt_length": 98
+    },
+    {
+        "timestamp": "2026-11-16T05:00:01.171630+00:00",
+        "mode": "protected",
+        "status": "success",
+        "decision": "ALLOW",
+        "risk_score": 0.0,
+        "latency_ms": 72954.35,
+        "prompt_length": 22
+    },
+    {
+        "timestamp": "2026-11-16T06:13:46.661275+00:00",
+        "mode": "protected",
+        "status": "blocked",
+        "decision": "BLOCK",
+        "risk_score": 1.0,
+        "latency_ms": 382.29,
+        "prompt_length": 98
+    },
+    {
+        "timestamp": "2026-11-16T06:17:20.554307+00:00",
+        "mode": "protected",
+        "status": "success",
+        "decision": "ALLOW",
+        "risk_score": 0.0,
+        "latency_ms": 70085.04,
+        "prompt_length": 22
+    },
+    {
+        "timestamp": "2026-11-16T06:23:01.074478+00:00",
+        "mode": "protected",
+        "status": "blocked",
+        "decision": "BLOCK",
+        "risk_score": 1.0,
+        "latency_ms": 288.6,
+        "prompt_length": 98
+    }
+]

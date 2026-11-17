@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prompt Injection Firewall</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">P</div>
+
+            <div>
+                <h2>Prompt Firewall</h2>
+                <span>AI Security &amp; Data Protection</span>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+
+            <p class="sidebar-heading">WORKSPACE</p>
+
+            <a href="#overview" class="nav-link active">
+                <span>◈</span>
+                Overview
+            </a>
+
+            <a href="#analytics" class="nav-link">
+                <span>▥</span>
+                Security Analytics
+            </a>
+
+            <a href="#testing" class="nav-link">
+                <span>⌘</span>
+                Prompt Testing
+            </a>
+
+            <a href="#events" class="nav-link">
+                <span>≡</span>
+                Security Events
+            </a>
+
+            <a href="#comparison" class="nav-link">
+                <span>⇄</span>
+                Model Comparison
+            </a>
+</div>
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="online-dot"></span>
+
+                <div>
+                    <strong>Firewall Online</strong>
+                    <small>Security monitoring active</small>
+                </div>
+
+            </div>
+
+            <p class="sidebar-version">
+                FIREWALL · v1.0.0
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP HEADER -->
+
+        <header class="topbar">
+
+            <div>
+                <p class="breadcrumb">
+                    Workspace / Overview
+                </p>
+
+                <h1>Security Overview</h1>
+            </div>
+
+            <div class="topbar-right">
+
+                <span class="live-indicator">
+                    <span class="online-dot"></span>
+                    LIVE MONITORING
+                </span>
+
+                <div class="profile-icon">P</div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= OVERVIEW ================= -->
+
+        <section id="overview" class="dashboard-section">
+
+            <div class="section-intro">
+
+                <div>
+                    <h2>Firewall Overview</h2>
+
+                    <p>
+                        Monitor prompt activity, threat detection
+                        and model security.
+                    </p>
+                </div>
+
+                <span class="live-tag">
+                    ● SYSTEM ACTIVE
+                </span>
+
+            </div>
+
+
+            <!-- METRIC CARDS -->
+
+            <div class="metrics-grid">
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+                        <span>Total Requests</span>
+                        <span class="metric-icon">↗</span>
+                    </div>
+
+                    <h2 id="total-requests">0</h2>
+
+                    <small>All processed requests</small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+                        <span>Prompts Allowed</span>
+                        <span class="metric-icon green">✓</span>
+                    </div>
+
+                    <h2 id="allowed-count">0</h2>
+
+                    <small>Requests passed by firewall</small>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+                        <span>Prompts Blocked</span>
+                        <span class="metric-icon red">⊘</span>
+                    </div>
+
+                    <h2 id="blocked-count">0</h2>
+
+                    <small>Potential security threats</small>
+
+                </div>
+</section>
+
+
+        <!-- ================= SECURITY ANALYTICS ================= -->
+
+        <section id="analytics" class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Security Analytics</h2>
+
+                    <p>
+                        Visual insights into firewall activity
+                        and security decisions.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="charts-grid">
+
+
+                <!-- REQUEST CHART -->
+
+                <div class="chart-card">
+
+                    <div class="chart-header">
+
+                        <div>
+                            <h3>Model Request Distribution</h3>
+                            <p>Baseline vs Protected execution</p>
+                        </div>
+
+                        <span class="chart-label">
+                            REQUESTS
+                        </span>
+
+                    </div>
+
+
+                    <div class="chart-area">
+
+                        <canvas id="request-chart"></canvas>
+
+                        <p
+                            id="request-chart-empty"
+                            class="empty-chart"
+                        >
+                            No request data available yet.
+                        </p>
+
+                    </div>
+
+
+                    <div class="chart-legend">
+
+                        <span>
+                            <i class="legend-dot baseline-dot"></i>
+                            Baseline
+                        </span>
+
+                        <span>
+                            <i class="legend-dot protected-dot"></i>
+                            Protected
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DECISION CHART -->
+
+                <div class="chart-card">
+
+                    <div class="chart-header">
+
+                        <div>
+                            <h3>Security Decision Distribution</h3>
+                            <p>Firewall decision breakdown</p>
+                        </div>
+
+                        <span class="chart-label">
+                            DECISIONS
+                        </span>
+
+                    </div>
+
+
+                    <div class="chart-area donut-area">
+
+                        <canvas id="decision-chart"></canvas>
+
+                        <p
+                            id="decision-chart-empty"
+                            class="empty-chart"
+                        >
+                            No decision data available yet.
+                        </p>
+
+                    </div>
+
+
+                    <div class="chart-legend">
+
+                        <span>
+                            <i class="legend-dot allowed-dot"></i>
+                            Allowed
+                        </span>
+
+                        <span>
+                            <i class="legend-dot blocked-dot"></i>
+                            Blocked
+                        </span>
+
+                        <span>
+                            <i class="legend-dot review-dot"></i>
+                            Review
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ANALYTICS SUMMARY -->
+
+            <div class="analytics-summary">
+
+
+                <div class="summary-card">
+                    <span>Baseline Requests</span>
+                    <strong id="analytics-baseline">0</strong>
+                </div>
+
+
+                <div class="summary-card">
+                    <span>Protected Requests</span>
+                    <strong id="analytics-protected">0</strong>
+                </div>
+
+
+                <div class="summary-card">
+                    <span>Output Security Blocks</span>
+                    <strong id="analytics-output-blocked">0</strong>
+                </div>
+
+
+                <div class="summary-card">
+                    <span>System Errors</span>
+                    <strong id="analytics-errors">0</strong>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROMPT TESTING ================= -->
+
+        <section id="testing" class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Prompt Security Testing</h2>
+
+                    <p>
+                        Test prompts against the baseline model
+                        and protected firewall.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="testing-panel">
+
+
+                <!-- EXECUTION MODE -->
+
+                <div class="mode-selection">
+
+
+                    <label class="mode-option">
+
+                        <input
+                            type="radio"
+                            name="execution-mode"
+                            value="baseline"
+                        >
+
+                        <span>
+                            <strong>Baseline Model</strong>
+
+                            <small>
+                                Direct model execution without
+                                firewall inspection
+                            </small>
+                        </span>
+
+                    </label>
+
+
+                    <label class="mode-option selected">
+
+                        <input
+                            type="radio"
+                            name="execution-mode"
+                            value="protected"
+                            checked
+                        >
+
+                        <span>
+                            <strong>Protected Model</strong>
+
+                            <small>
+                                Input firewall and output
+                                security inspection
+                            </small>
+                        </span>
+
+                    </label>
+
+
+                </div>
+
+
+                <!-- PROMPT INPUT -->
+
+                <div class="prompt-input-area">
+
+                    <label for="prompt-input">
+                        Enter your prompt
+                    </label>
+
+                    <textarea
+                        id="prompt-input"
+                        maxlength="10000"
+                        rows="6"
+                        placeholder="Enter a normal prompt or a prompt injection attempt to test the firewall..."
+                    ></textarea>
+
+
+                    <div class="input-footer">
+
+                        <span id="character-count">
+                            0 / 10000
+                        </span>
+
+                        <button
+                            id="send-button"
+                            class="primary-button"
+                        >
+                            Run Security Test →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TEST RESULT ================= -->
+
+            <div
+                id="result-section"
+                class="result-section"
+                style="display:none"
+            >
+
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Security Analysis Result</h2>
+
+                        <p>
+                            Inspection results for the submitted prompt.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- RESULT STATUS -->
+
+                <div class="result-status-card">
+
+                    <div>
+
+                        <span id="result-status">
+                            PROCESSING
+                        </span>
+
+                        <p id="result-message">
+                            Waiting for analysis...
+                        </p>
+
+                    </div>
+
+
+                    <div class="processing-time">
+
+                        <small>Processing Time</small>
+
+                        <strong id="processing-time">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULT METRICS -->
+
+                <div class="result-metrics">
+
+
+                    <div class="result-metric">
+                        <span>Risk Score</span>
+                        <strong id="risk-score">—</strong>
+                    </div>
+
+
+                    <div class="result-metric">
+                        <span>Firewall Decision</span>
+                        <strong id="firewall-decision">—</strong>
+                    </div>
+
+
+                    <div class="result-metric">
+                        <span>Rule Score</span>
+                        <strong id="rule-score">—</strong>
+                    </div>
+
+
+                    <div class="result-metric">
+                        <span>ML Score</span>
+                        <strong id="ml-score">—</strong>
+                    </div>
+
+
+                </div>
+
+
+                <!-- DETAILED ANALYSIS -->
+
+                <div class="analysis-grid">
+
+
+                    <!-- INPUT ANALYSIS -->
+
+                    <div class="analysis-card">
+
+                        <h3>Input Security Analysis</h3>
+
+
+                        <div class="detail-row">
+
+                            <span>Highest Risk Variant</span>
+
+                            <strong id="highest-variant">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-row">
+
+                            <span>Analysis Decision</span>
+
+                            <strong id="analysis-decision">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <h4>Rule Findings</h4>
+
+                        <pre id="rule-findings">No analysis available.</pre>
+
+
+                        <h4>Normalization Variants</h4>
+
+                        <pre id="normalization-variants">No variants available.</pre>
+
+
+                    </div>
+
+
+                    <!-- OUTPUT INSPECTION -->
+
+                    <div class="analysis-card">
+
+                        <h3>Output Security Inspection</h3>
+
+
+                        <div class="detail-row">
+
+                            <span>Inspection Status</span>
+
+                            <strong id="output-inspection">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <h4>Detected Findings</h4>
+
+                        <pre id="output-findings">No findings available.</pre>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- MODEL RESPONSE -->
+
+                <div class="response-card">
+
+                    <h3>Model Response</h3>
+
+                    <div id="llm-response">
+                        No response available.
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SECURITY EVENTS ================= -->
+
+        <section id="events" class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Recent Security Events</h2>
+
+                    <p>
+                        Latest prompt processing activity.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Mode</th>
+                            <th>Status</th>
+                            <th>Decision</th>
+                            <th>Risk Score</th>
+                            <th>Latency</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="events-table">
+
+                        <tr>
+                            <td colspan="6">
+                                No events recorded yet.
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MODEL COMPARISON ================= -->
+
+        <section id="comparison" class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Model Comparison</h2>
+
+                    <p>
+                        Compare model execution paths.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="comparison-grid">
+
+
+                <!-- BASELINE -->
+
+                <div class="comparison-card">
+
+                    <span class="comparison-tag">
+                        BASELINE
+                    </span>
+
+                    <h3>Unprotected Model</h3>
+
+                    <p>
+                        Direct LLM execution without the external firewall.
+                    </p>
+
+                    <div
+                        class="comparison-number"
+                        id="baseline-requests"
+                    >
+                        0
+                    </div>
+
+                    <small>Total baseline requests</small>
+
+                </div>
+
+
+                <!-- PROTECTED -->
+
+                <div class="comparison-card protected-comparison">
+
+                    <span class="comparison-tag">
+                        PROTECTED
+                    </span>
+
+                    <h3>Firewall-Protected Model</h3>
+
+                    <p>
+                        Input analysis, risk-based decisions
+                        and output inspection.
+                    </p>
+
+                    <div
+                        class="comparison-number"
+                        id="protected-requests"
+                    >
+                        0
+                    </div>
+
+                    <small>Total protected requests</small>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="footer">
+
+            <span>
+                Prompt Injection Firewall
+            </span>
+
+            <span>
+                AI Security Monitoring System · v1.0.0
+            </span>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

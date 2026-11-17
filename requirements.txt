@@ -1,0 +1,10 @@
+transformers
+torch
+sentencepiece
+protobuf
+streamlit
+scikit-learn
+pandas
+requests
+matplotlib
+python-dotenv
